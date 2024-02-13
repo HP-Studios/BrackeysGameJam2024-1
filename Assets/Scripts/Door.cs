@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
     [SerializeField] float openSpeed = 2.0f;
     [SerializeField] float openAngle = 90f;
     [SerializeField] float openDistance = 2.0f;
-    [SerializeField] RandomWheelDecider buttonScript;
+    [SerializeField] RandomWheelDecider buttonScript = null;
     [SerializeField] bool isLocked = true;
     Quaternion openRotation;
     bool isPlayerInDistance;
@@ -25,14 +25,15 @@ public class Door : MonoBehaviour
     {
         isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < openDistance;
 
-        if (isOpen && isPlayerInDistance)
+        if ((isOpen || !isLocked) && isPlayerInDistance)
         {
             OpenSlowly();
         }
-        else if (isOpen) 
+        else if (isOpen || !isLocked) 
         {
             KeepDoorOpenSequance();
         }
+        
     }
     private void OnMouseOver()
     {
@@ -55,16 +56,17 @@ public class Door : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isPlayerInDistance && buttonScript.SpinningFinished)
+        if (buttonScript)
         {
-            isOpen = !isOpen;
-            doorText.enabled = false;
+            if (isPlayerInDistance && buttonScript.SpinningFinished)
+            {
+                isOpen = !isOpen;
+                doorText.enabled = false;
+            }
         }
-        if (!isLocked && isPlayerInDistance)
-        {
-            isOpen = !isOpen;
-            doorText.enabled = false;
-        }
+
+       
+        
     }
 
     private void OpenSlowly()
