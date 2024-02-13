@@ -5,6 +5,7 @@ using UnityEngine;
 public class RandomWheelDecider : MonoBehaviour
 {
     [SerializeField] GameObject wheel;
+    [SerializeField] private GameObject button;
     [SerializeField] float rotationSpeedOffSet;
     [SerializeField] float decelerationOffSet;
     float rotationSpeed; // Start with high rotation speed
@@ -13,7 +14,11 @@ public class RandomWheelDecider : MonoBehaviour
     float roundsToSpin; // Number of rounds to spin before decelerating
     bool isWheelSpining; //triger for starting spin
     float totalDistance;
-    
+
+    private bool canPressButtonAgain;
+    private bool buttonAnimAll; //To control the 4 frames
+    private bool buttonPressed;
+    private bool buttonAnimation;
     private bool spinningFinished; //To check if the spinning has stopped
     public bool SpinningFinished { get { return spinningFinished; } }
 
@@ -26,6 +31,9 @@ public class RandomWheelDecider : MonoBehaviour
 
     void Awake()
     {
+        canPressButtonAgain = true;
+        buttonAnimAll = false;
+        buttonPressed = false;
         SetRandomValues();
         rotationSpeed += rotationSpeedOffSet;
         deceleration += decelerationOffSet;
@@ -37,6 +45,7 @@ public class RandomWheelDecider : MonoBehaviour
         if (isWheelSpining)
         {
             SpinTheWheel();
+            
         }
     }
 
@@ -50,7 +59,15 @@ public class RandomWheelDecider : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        isWheelSpining = true;
+        if (canPressButtonAgain)
+        {   
+            isWheelSpining = true;
+            buttonAnimation = true;
+            buttonPressed = true;
+            buttonAnimAll = true;
+            canPressButtonAgain = false;
+        }
+     
     }
     
     private void SpinTheWheel()
@@ -65,5 +82,36 @@ public class RandomWheelDecider : MonoBehaviour
         {
             spinningFinished = true;
         }
+
+        if (buttonAnimAll)
+        {
+            if (buttonPressed && buttonAnimation) //T T
+            {
+                Debug.Log(1);
+                button.transform.position += new Vector3(0, 5, 0) * Time.deltaTime;
+                buttonAnimation = false;
+            }
+            else if(buttonPressed && !buttonAnimation) //T F
+            {
+                Debug.Log(2);
+                button.transform.position += new Vector3(0, 5, 0) * Time.deltaTime; 
+                buttonPressed = false;
+                buttonAnimation = true;
+            }
+            else if(!buttonPressed && buttonAnimation) //F T
+            {
+                Debug.Log(3);
+                button.transform.position += new Vector3(0, -5, 0) * Time.deltaTime;
+                buttonPressed = false;
+                buttonAnimation = false;
+            }
+            else if(!buttonPressed && !buttonAnimation) //F F
+            {
+                Debug.Log(4);
+                button.transform.position += new Vector3(0, -5, 0) * Time.deltaTime; 
+                buttonAnimAll = false; //Exit the animation
+            }
+        }
+        
     }
 }

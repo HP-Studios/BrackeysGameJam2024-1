@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
   m_PrefabInstance: {fileID: 1313090076986717204}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1606163979}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be28a3aa6ef9d694fb2f14fedc43b850, type: 3}
@@ -2215,6 +2215,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5d4a1911504fef24da91074acddf0c1a, type: 3}
+--- !u!1 &1606163979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3684842586702946277, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+  m_PrefabInstance: {fileID: 1313090076986717204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1875945782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +2536,10 @@ PrefabInstance:
       propertyPath: wheel
       value: 
       objectReference: {fileID: 2231035902842232919}
+    - target: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1606163979}
     - target: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
       propertyPath: rotationSpeedOffSet
       value: 56.94
