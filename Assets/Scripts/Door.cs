@@ -27,9 +27,9 @@ public class Door : MonoBehaviour
         {
             OpenSlowly();
         }
-        else if (isOpen)  // Close the door only when it's open
+        else if (isOpen) 
         {
-            CloseSlowly();
+            KeepDoorOpenSequance();
         }
     }
     private void OnMouseOver()
@@ -37,6 +37,10 @@ public class Door : MonoBehaviour
         if (!isOpen && isPlayerInDistance)
         {
             doorText.enabled = true;
+        }
+        else
+        {
+            doorText.enabled = false;
         }
     }
     private void OnMouseExit()
@@ -51,7 +55,7 @@ public class Door : MonoBehaviour
     {
         if (isPlayerInDistance)
         {
-            isOpen = !isOpen;  // Toggle the door state
+            isOpen = !isOpen;
             doorText.enabled = false;
         }
     }
@@ -61,9 +65,9 @@ public class Door : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, openRotation, Time.deltaTime * openSpeed);
     }
 
-    private void CloseSlowly()
+    private void KeepDoorOpenSequance()
     {
-        Quaternion closedRotation = Quaternion.Euler(0, 0, 0);  // Change this line to set the closed rotation
+        Quaternion closedRotation = Quaternion.Euler(0, 0, 0); 
         transform.rotation = Quaternion.Lerp(transform.rotation, closedRotation, Time.deltaTime * openSpeed);
     }
 }

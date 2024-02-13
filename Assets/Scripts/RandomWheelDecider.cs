@@ -49,7 +49,7 @@ public class RandomWheelDecider : MonoBehaviour
         if (totalDistance > 0)
         {
             totalDistance = rotationSpeed * Time.deltaTime - (0.5f * deceleration * Time.deltaTime * Time.deltaTime);
-            wheel.transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0); // Rotate the wheel
+            wheel.transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0, Space.Self); // Rotate the wheel SPACE SELF OBJENÝN KENDÝ EKSENÝNDE DÖNMESÝNE YARAR BEN EKLEDÝM SORUN ÇIKARSA BUNA BÝR BAK EMÝN DEÐÝLÝM EKLEMEK MANTIKLI MI SORUN ÇIKMASIN DÝYE EKLEDÝM AMA SORUN DA ÇIKARABÝLÝR OHA NE UZUN YAZDIM NEYSE BU KADARDI SLM NABER B)
             rotationSpeed -= deceleration * Time.deltaTime; // Decrease the speed
         }
     }
