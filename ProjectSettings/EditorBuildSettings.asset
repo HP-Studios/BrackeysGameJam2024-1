@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SandBoxFurkan.unity
+    guid: 769970c5bbf624e419c1c01ebde85ef6
+  - enabled: 1
+    path: Assets/Scenes/Rooms Template.unity
+    guid: 90eaf20c620548f47ae3886daab00452
   m_configObjects: {}
