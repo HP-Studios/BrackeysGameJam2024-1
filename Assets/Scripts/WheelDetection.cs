@@ -18,7 +18,6 @@ public class WheelDetection : MonoBehaviour
         if (wheelScript.SpinningFinished)
         {
             string objTag = other.tag;
-            Debug.Log( objTag);
             switch (objTag)
             {
                 case "Purple":
