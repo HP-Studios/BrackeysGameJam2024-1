@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     [SerializeField] float openAngle = 90f;
     [SerializeField] float openDistance = 2.0f;
     [SerializeField] RandomWheelDecider buttonScript;
+    [SerializeField] bool isLocked = true;
     Quaternion openRotation;
     bool isPlayerInDistance;
     bool isOpen;
@@ -55,6 +56,11 @@ public class Door : MonoBehaviour
     private void OnMouseDown()
     {
         if (isPlayerInDistance && buttonScript.SpinningFinished)
+        {
+            isOpen = !isOpen;
+            doorText.enabled = false;
+        }
+        if (!isLocked && isPlayerInDistance)
         {
             isOpen = !isOpen;
             doorText.enabled = false;
