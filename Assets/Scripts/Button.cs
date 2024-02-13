@@ -7,12 +7,21 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     [SerializeField] TextMeshPro buttonText;
+    [SerializeField] Animation pressAnim;
+    //[SerializeField] private GameObject button;
+    //private bool canPressButtonAgain;
+    //private bool buttonAnimAll; //To control the 4 frames
+    bool buttonPressed;
+    //private bool buttonAnimation;
     private void Start()
     {
-        buttonText.enabled = false;
+        //canPressButtonAgain = true;
+        //buttonAnimAll = false;
+        //buttonPressed = false;
+        //buttonText.enabled = false;
     }
 
-    private void OnMouseEnter()
+    private void OnMouseOver()
     {
         buttonText.enabled = true;
     }
@@ -24,6 +33,13 @@ public class Button : MonoBehaviour
 
     private void OnMouseDown()
     {
-        buttonText.enabled = false;
+        //    canPressButtonAgain = false;
+        //}
+        if (!buttonPressed)
+        {
+            pressAnim.Play();
+            buttonText.enabled = false;
+            buttonPressed = true;
+        }
     }
 }

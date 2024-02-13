@@ -2288,12 +2288,53 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
   m_PrefabInstance: {fileID: 1313090076986717204}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1754202881}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be28a3aa6ef9d694fb2f14fedc43b850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1754202881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3684842586702946277, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+  m_PrefabInstance: {fileID: 1313090076986717204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1754202888
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754202881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 574b3cd0d7713f047a9d709a298f9b41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1754202889
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754202881}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!43 &1860033681
 Mesh:
   m_ObjectHideFlags: 0
@@ -3293,6 +3334,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2231035902842232919}
     - target: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1754202881}
+    - target: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
       propertyPath: rotationSpeedOffSet
       value: 56.94
       objectReference: {fileID: 0}
@@ -3300,10 +3345,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5827826317669081364, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: pressAnim
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034357328344902081, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034357328344902081, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034357328344902081, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3684842586702946277, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1754202888}
+    - targetCorrespondingSourceObject: {fileID: 3684842586702946277, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1754202889}
     - targetCorrespondingSourceObject: {fileID: 8372296635092874007, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
