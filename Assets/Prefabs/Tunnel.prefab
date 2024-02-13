@@ -504,7 +504,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 39850
+  m_VersionIndex: 39853
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 40854
+  m_VersionIndex: 40857
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1317,37 +1317,37 @@ MonoBehaviour:
   m_Positions:
   - {x: -0.25, y: 0, z: -2.5}
   - {x: -0.25, y: 0, z: 0}
-  - {x: 6, y: 0, z: -2.5}
-  - {x: 6, y: 0, z: 0}
+  - {x: 6.3090115, y: 0, z: -2.5}
+  - {x: 6.3090115, y: 0, z: 0}
   - {x: -0.25, y: 0, z: 0}
   - {x: -0.25, y: 0, z: 2.5}
-  - {x: 6, y: 0, z: 0}
-  - {x: 6, y: 0, z: 2.5}
-  - {x: 6, y: 0, z: -2.5}
-  - {x: 6, y: 0, z: 0}
-  - {x: 12.25, y: 0, z: -2.5}
-  - {x: 12.25, y: 0, z: 0}
-  - {x: 6, y: 0, z: 0}
-  - {x: 6, y: 0, z: 2.5}
-  - {x: 12.25, y: 0, z: 0}
-  - {x: 12.25, y: 0, z: 2.5}
+  - {x: 6.3090115, y: 0, z: 0}
+  - {x: 6.3090115, y: 0, z: 2.5}
+  - {x: 6.3090115, y: 0, z: -2.5}
+  - {x: 6.3090115, y: 0, z: 0}
+  - {x: 12.868023, y: 0, z: -2.5}
+  - {x: 12.868023, y: 0, z: 0}
+  - {x: 6.3090115, y: 0, z: 0}
+  - {x: 6.3090115, y: 0, z: 2.5}
+  - {x: 12.868023, y: 0, z: 0}
+  - {x: 12.868023, y: 0, z: 2.5}
   m_Textures0:
   - {x: -0.25, y: -2.5}
   - {x: -0.25, y: 0}
-  - {x: 6, y: -2.5}
-  - {x: 6, y: 0}
+  - {x: 6.3090115, y: -2.5}
+  - {x: 6.3090115, y: 0}
   - {x: -0.25, y: 0}
   - {x: -0.25, y: 2.5}
-  - {x: 6, y: 0}
-  - {x: 6, y: 2.5}
-  - {x: 6, y: -2.5}
-  - {x: 6, y: 0}
-  - {x: 12.25, y: -2.5}
-  - {x: 12.25, y: 0}
-  - {x: 6, y: 0}
-  - {x: 6, y: 2.5}
-  - {x: 12.25, y: 0}
-  - {x: 12.25, y: 2.5}
+  - {x: 6.3090115, y: 0}
+  - {x: 6.3090115, y: 2.5}
+  - {x: 6.3090115, y: -2.5}
+  - {x: 6.3090115, y: 0}
+  - {x: 12.868023, y: -2.5}
+  - {x: 12.868023, y: 0}
+  - {x: 6.3090115, y: 0}
+  - {x: 6.3090115, y: 2.5}
+  - {x: 12.868023, y: 0}
+  - {x: 12.868023, y: 2.5}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 12476
+  m_VersionIndex: 12989
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1395,13 +1395,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 4734313757047521299
-  m_Size: {x: 12.5, y: 0, z: 5}
+  m_Size: {x: 13.118023, y: 0, z: 5}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
   m_PivotPosition: {x: 0, y: 0, z: 0}
-  m_UnmodifiedMeshVersion: 12476
+  m_UnmodifiedMeshVersion: 12983
   m_ShapeBox:
-    m_Center: {x: 6, y: 0, z: 0}
+    m_Center: {x: 6.3090115, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 0, z: 0.5}
   references:
     version: 2
@@ -2989,7 +2989,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10342
+  m_VersionIndex: 10345
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
