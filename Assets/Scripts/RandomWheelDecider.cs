@@ -13,17 +13,25 @@ public class RandomWheelDecider : MonoBehaviour
     float roundsToSpin; // Number of rounds to spin before decelerating
     bool isWheelSpining; //triger for starting spin
     float totalDistance;
+    
+    private bool spinningFinished; //To check if the spinning has stopped
+    public bool SpinningFinished { get { return spinningFinished; } }
+
+    public void SpinningReset()
+    {
+        spinningFinished = false;
+    }
+
     // h = V0 * t - 1/2 a t^2
 
     void Awake()
     {
         SetRandomValues();
-    }
-    private void Start()
-    {
         rotationSpeed += rotationSpeedOffSet;
         deceleration += decelerationOffSet;
+        spinningFinished = false;
     }
+    
     void Update()
     {
         if (isWheelSpining)
@@ -34,7 +42,7 @@ public class RandomWheelDecider : MonoBehaviour
 
     private void SetRandomValues()
     {
-        roundsToSpin = Random.Range(2, 3);
+        roundsToSpin = Random.Range(1, 2);
         targetAngle = Random.Range(0, 360);
         totalDistance = roundsToSpin * 360 + targetAngle;
         rotationSpeed = Random.Range(180, 200);
@@ -44,13 +52,19 @@ public class RandomWheelDecider : MonoBehaviour
     {
         isWheelSpining = true;
     }
+    
     private void SpinTheWheel()
     {
+
         if (totalDistance > 0)
         {
             totalDistance = rotationSpeed * Time.deltaTime - (0.5f * deceleration * Time.deltaTime * Time.deltaTime);
-            wheel.transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0, Space.Self); // Rotate the wheel SPACE SELF OBJENÝN KENDÝ EKSENÝNDE DÖNMESÝNE YARAR BEN EKLEDÝM SORUN ÇIKARSA BUNA BÝR BAK EMÝN DEÐÝLÝM EKLEMEK MANTIKLI MI SORUN ÇIKMASIN DÝYE EKLEDÝM AMA SORUN DA ÇIKARABÝLÝR OHA NE UZUN YAZDIM NEYSE BU KADARDI SLM NABER B)
+            wheel.transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0, Space.Self); // Rotate the wheel SPACE SELF OBJENï¿½N KENDï¿½ EKSENï¿½NDE Dï¿½NMESï¿½NE YARAR BEN EKLEDï¿½M SORUN ï¿½IKARSA BUNA Bï¿½R BAK EMï¿½N DEï¿½ï¿½Lï¿½M EKLEMEK MANTIKLI MI SORUN ï¿½IKMASIN Dï¿½YE EKLEDï¿½M AMA SORUN DA ï¿½IKARABï¿½Lï¿½R OHA NE UZUN YAZDIM NEYSE BU KADARDI SLM NABER B)
             rotationSpeed -= deceleration * Time.deltaTime; // Decrease the speed
+        }
+        else
+        {
+            spinningFinished = true;
         }
     }
 }

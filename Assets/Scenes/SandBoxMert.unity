@@ -123,6 +123,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &64301327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3459335260232573125, guid: e20b20f362bd2a3439fa86740e5620e2, type: 3}
+  m_PrefabInstance: {fileID: 1313090076986717204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be28a3aa6ef9d694fb2f14fedc43b850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &87092160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4815317087028051037, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
+  m_PrefabInstance: {fileID: 7744173116395533079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &87092166
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87092160}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!43 &162557340
 Mesh:
   m_ObjectHideFlags: 0
@@ -694,7 +737,7 @@ Transform:
   m_GameObject: {fileID: 194087866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: -10}
+  m_LocalPosition: {x: -18.23, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2052,7 +2095,7 @@ Transform:
   m_GameObject: {fileID: 900091552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.75, y: 1.5, z: 6.25}
+  m_LocalPosition: {x: -4.5, y: -0.4, z: 6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2623,6 +2666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\xC7ark"
       objectReference: {fileID: 0}
+    - target: {fileID: 3301023226668126998, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323023669225849212, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11495644
@@ -2663,14 +2710,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8943442215162148973, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 5729087381564689357, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
+      propertyPath: wheelScript
+      value: 
+      objectReference: {fileID: 64301327}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4815317087028051037, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 87092166}
   m_SourcePrefab: {fileID: 100100000, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
