@@ -134,38 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be28a3aa6ef9d694fb2f14fedc43b850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &87092160 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4815317087028051037, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
-  m_PrefabInstance: {fileID: 7744173116395533079}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &87092166
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87092160}
-  serializedVersion: 4
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!43 &162557340
 Mesh:
   m_ObjectHideFlags: 0
@@ -2666,10 +2634,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\xC7ark"
       objectReference: {fileID: 0}
-    - target: {fileID: 3301023226668126998, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4323023669225849212, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11495644
@@ -2717,10 +2681,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4815317087028051037, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 87092166}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e59e8a5bd6891449ab69bf16b5d59ff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
