@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8034357328344902081}
+  - component: {fileID: 2317622512806530538}
+  - component: {fileID: 3057023565984145015}
   - component: {fileID: 3459335260232573125}
   - component: {fileID: 5827826317669081364}
   - component: {fileID: 381732943477164850}
@@ -30,13 +32,49 @@ Transform:
   m_GameObject: {fileID: 3684842586702946277}
   serializedVersion: 2
   m_LocalRotation: {x: 0.04571809, y: -2.9239455e-24, z: 1.0151454e-17, w: 0.9989544}
-  m_LocalPosition: {x: -0, y: 1.1992348, z: 0.025366625}
+  m_LocalPosition: {x: 0, y: 1.214, z: 0.027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5976666329410212608}
   m_Father: {fileID: 3183857890485110500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2317622512806530538
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684842586702946277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 574b3cd0d7713f047a9d709a298f9b41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &3057023565984145015
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684842586702946277}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &3459335260232573125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheel: {fileID: 0}
+  rotationSpeedOffSet: 56.94
+  decelerationOffSet: 0
 --- !u!114 &5827826317669081364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 7156892819710802912}
+  pressAnim: {fileID: 0}
 --- !u!33 &381732943477164850
 MeshFilter:
   m_ObjectHideFlags: 0
