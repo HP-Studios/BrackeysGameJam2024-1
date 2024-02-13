@@ -42,7 +42,7 @@ public class RandomWheelDecider : MonoBehaviour
 
     private void SetRandomValues()
     {
-        roundsToSpin = Random.Range(1, 2);
+        roundsToSpin = 1;
         targetAngle = Random.Range(0, 360);
         totalDistance = roundsToSpin * 360 + targetAngle;
         rotationSpeed = Random.Range(180, 200);
@@ -55,7 +55,6 @@ public class RandomWheelDecider : MonoBehaviour
     
     private void SpinTheWheel()
     {
-
         if (totalDistance > 0)
         {
             totalDistance = rotationSpeed * Time.deltaTime - (0.5f * deceleration * Time.deltaTime * Time.deltaTime);
