@@ -4,17 +4,35 @@ using UnityEngine;
 
 public class RandomWheelDecider : MonoBehaviour
 {
-    [SerializeField] private GameObject wheel;
-    private float rotationSpeed; // Start with high rotation speed
-    private float deceleration; // Deceleration rate
-    private float targetAngle; // The target angle for the wheel to stop at
-    private float roundsToSpin; // Number of rounds to spin before decelerating
-
-    private float totalDistance;
-
+    [SerializeField] GameObject wheel;
+    [SerializeField] float rotationSpeedOffSet;
+    [SerializeField] float decelerationOffSet;
+    float rotationSpeed; // Start with high rotation speed
+    float deceleration; // Deceleration rate
+    float targetAngle; // The target angle for the wheel to stop at
+    float roundsToSpin; // Number of rounds to spin before decelerating
+    bool isWheelSpining; //triger for starting spin
+    float totalDistance;
     // h = V0 * t - 1/2 a t^2
 
     void Awake()
+    {
+        SetRandomValues();
+    }
+    private void Start()
+    {
+        rotationSpeed += rotationSpeedOffSet;
+        deceleration += decelerationOffSet;
+    }
+    void Update()
+    {
+        if (isWheelSpining)
+        {
+            SpinTheWheel();
+        }
+    }
+
+    private void SetRandomValues()
     {
         roundsToSpin = Random.Range(2, 3);
         targetAngle = Random.Range(0, 360);
@@ -22,8 +40,11 @@ public class RandomWheelDecider : MonoBehaviour
         rotationSpeed = Random.Range(180, 200);
         deceleration = Random.Range(15, 20);
     }
-
-    void Update()
+    private void OnMouseDown()
+    {
+        isWheelSpining = true;
+    }
+    private void SpinTheWheel()
     {
         if (totalDistance > 0)
         {
@@ -32,6 +53,4 @@ public class RandomWheelDecider : MonoBehaviour
             rotationSpeed -= deceleration * Time.deltaTime; // Decrease the speed
         }
     }
-
-
 }

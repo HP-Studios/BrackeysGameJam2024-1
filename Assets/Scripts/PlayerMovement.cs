@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    //BU KODUN TAMAMEN DÜZENLENMESÝ GEREKÝYOR AÞIRI KÖTÜ YAZILMIÞ
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public float defaultHeight = 2f;
     public float crouchHeight = 1f;
     public float crouchSpeed = 3f;
+    [SerializeField] float temporarilyRunSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ RUN SPEEDÝ 12YE SABÝTLÝYORDU
+    [SerializeField] float temporarilyWalkSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ WALK SPEEDÝ 6YA SABÝTLÝYORDU
 
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
@@ -54,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.R) && canMove)
+        if (Input.GetKey(KeyCode.LeftControl) && canMove)
         {
             characterController.height = crouchHeight;
             walkSpeed = crouchSpeed;
@@ -64,8 +67,8 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             characterController.height = defaultHeight;
-            walkSpeed = 6f;
-            runSpeed = 12f;
+            walkSpeed = temporarilyWalkSpeed;
+            runSpeed = temporarilyRunSpeed;
         }
 
         characterController.Move(moveDirection * Time.deltaTime);
