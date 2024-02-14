@@ -4,11 +4,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(BoxCollider))]
 public class RoomLabeler : MonoBehaviour
 {
     [SerializeField] string roomName;
     [SerializeField] GameObject roomPrize;
     [SerializeField] TextMeshProUGUI roomText;
+    [SerializeField] float returnMainDelay = 3f;
+    [SerializeField] bool isClickAble;
     void Start()
     {
         roomText.enabled = false;
@@ -16,21 +19,22 @@ public class RoomLabeler : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !isClickAble)
         {
             roomText.enabled = true;
-            ReturnMainRoom();
+            Invoke("ReturnMainRoom", returnMainDelay);
         }
     }
-
+    private void OnMouseDown()
+    {
+        if (isClickAble)
+        {
+            roomText.enabled = true;
+            Invoke("ReturnMainRoom", returnMainDelay);
+        }
+    }
     private static void ReturnMainRoom()
     {
         SceneManager.LoadScene(0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

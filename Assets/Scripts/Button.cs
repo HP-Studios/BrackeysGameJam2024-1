@@ -8,8 +8,14 @@ public class Button : MonoBehaviour
 {
     [SerializeField] TextMeshPro buttonText;
     [SerializeField] private Animator pressAnim = null;
-
+    [SerializeField] float playerDistance = 4.0f;
+    bool isPlayerInDistance;
     bool buttonPressed;
+
+    private void Update()
+    {
+        isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < playerDistance;
+    }
     private void Start()
     {
 
@@ -19,7 +25,10 @@ public class Button : MonoBehaviour
 
     private void OnMouseOver()
     {
-        buttonText.enabled = true;
+        if (isPlayerInDistance)
+        {
+            buttonText.enabled = true;
+        }
     }
 
     private void OnMouseExit()
@@ -29,7 +38,7 @@ public class Button : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!buttonPressed)
+        if (!buttonPressed && isPlayerInDistance)
         {
             pressAnim.SetTrigger("isPressed");
             buttonText.enabled = false;

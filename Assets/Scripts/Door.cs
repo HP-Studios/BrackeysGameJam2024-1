@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField] TextMeshPro doorText;
     [SerializeField] float openSpeed = 2.0f;
     [SerializeField] float openAngle = 90f;
-    [SerializeField] float openDistance = 2.0f;
+    [SerializeField] float playerDistance = 2.0f;
     [SerializeField] RandomWheelDecider buttonScript = null;
     [SerializeField] bool isLocked = true;
     Quaternion openRotation;
@@ -23,7 +23,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < openDistance;
+        isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < playerDistance;
 
         if ((isOpen || !isLocked) && isPlayerInDistance)
         {

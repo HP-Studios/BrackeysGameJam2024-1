@@ -15,6 +15,9 @@ public class RandomWheelDecider : MonoBehaviour
     float totalDistance;
     private bool spinningFinished; //To check if the spinning has stopped
 
+    [SerializeField] float playerDistance = 4.0f;
+    bool isPlayerInDistance;
+
 
     public bool SpinningFinished { get { return spinningFinished; } }
 
@@ -40,6 +43,7 @@ public class RandomWheelDecider : MonoBehaviour
             SpinTheWheel();
             
         }
+        isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < playerDistance;
     }
 
     private void SetRandomValues()
@@ -52,7 +56,10 @@ public class RandomWheelDecider : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        isWheelSpining = true;
+        if (isPlayerInDistance)
+        {
+            isWheelSpining = true;
+        }
     }
 
     private void SpinTheWheel()
