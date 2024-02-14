@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SandBox/SandBoxFurkan.unity
     guid: 769970c5bbf624e419c1c01ebde85ef6
   - enabled: 1
-    path: Assets/Scenes/Nothing Room.unity
-    guid: d50d9a67c64b29645a52efa2fa8478ee
-  - enabled: 1
     path: Assets/Scenes/Rooms Template.unity
     guid: 90eaf20c620548f47ae3886daab00452
   m_configObjects: {}
