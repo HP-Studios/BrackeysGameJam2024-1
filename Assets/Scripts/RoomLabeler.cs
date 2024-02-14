@@ -11,6 +11,7 @@ public class RoomLabeler : MonoBehaviour
     [SerializeField] GameObject roomPrize;
     [SerializeField] TextMeshProUGUI roomText;
     [SerializeField] float returnMainDelay = 3f;
+    [SerializeField] float textDelay = 3f;
     [SerializeField] bool isClickAble;
     void Start()
     {
@@ -21,10 +22,16 @@ public class RoomLabeler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !isClickAble)
         {
-            roomText.enabled = true;
+            Invoke("DisplayRoomText", textDelay);
             Invoke("ReturnMainRoom", returnMainDelay);
         }
     }
+
+    private void DisplayRoomText()
+    {
+        roomText.enabled = true;
+    }
+
     private void OnMouseDown()
     {
         if (isClickAble)
@@ -33,7 +40,7 @@ public class RoomLabeler : MonoBehaviour
             Invoke("ReturnMainRoom", returnMainDelay);
         }
     }
-    private static void ReturnMainRoom()
+    void ReturnMainRoom()
     {
         SceneManager.LoadScene(0);
     }
