@@ -42,6 +42,7 @@ public class RoomLabeler : MonoBehaviour
     }
     void ReturnMainRoom()
     {
+        PlayerPrefs.SetInt("Nothing Room", 1);
         SceneManager.LoadScene(0);
     }
 }
