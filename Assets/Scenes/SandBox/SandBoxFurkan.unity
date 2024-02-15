@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NothingRoom: {fileID: 764976957}
+  DoorRoom: {fileID: 0}
 --- !u!43 &844133690
 Mesh:
   m_ObjectHideFlags: 0
@@ -1941,11 +1942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599809509079034779, guid: 5dc363ec8af1910408ec26c6590a697f, type: 3}
       propertyPath: decelerationOffSet
-      value: 500
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8599809509079034779, guid: 5dc363ec8af1910408ec26c6590a697f, type: 3}
       propertyPath: rotationSpeedOffSet
-      value: 1000
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
