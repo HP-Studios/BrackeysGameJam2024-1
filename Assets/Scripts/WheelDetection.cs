@@ -1,18 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WheelDetection : MonoBehaviour
 {
     [SerializeField] private RandomWheelDecider wheelScript;
-
-
-    private void Update()
-    {
-        Debug.Log(wheelScript.SpinningFinished);
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (wheelScript.SpinningFinished)

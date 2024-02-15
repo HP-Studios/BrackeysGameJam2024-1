@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms Template.unity
     guid: 90eaf20c620548f47ae3886daab00452
+  - enabled: 1
+    path: Assets/Scenes/Minimalist Room.unity
+    guid: 1fc8bbe322ed8d14c9307503e37de312
+  - enabled: 1
+    path: Assets/Scenes/Door Room.unity
+    guid: cf7c3cffcb0c1b148b039ff2d82fd36f
   m_configObjects: {}
