@@ -2024,6 +2024,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.471
       objectReference: {fileID: 0}
+    - target: {fileID: 3122062156636282765, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122062156636282765, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242429667857915394, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4581345885493155257, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2084,6 +2096,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1182129874}
+    - target: {fileID: 6776669883195508792, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7162752321561459834, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
       propertyPath: m_Mesh
       value: 
