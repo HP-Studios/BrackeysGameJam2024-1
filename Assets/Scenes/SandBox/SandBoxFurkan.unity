@@ -2065,6 +2065,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1685525248}
     - target: {fileID: 5744474270964500919, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744474270964500919, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

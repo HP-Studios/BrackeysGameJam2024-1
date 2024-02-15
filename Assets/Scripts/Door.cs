@@ -64,9 +64,6 @@ public class Door : MonoBehaviour
                 doorText.enabled = false;
             }
         }
-
-       
-        
     }
 
     private void OpenSlowly()
