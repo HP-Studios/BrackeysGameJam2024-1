@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class RoomLabeler : MonoBehaviour
 {
     [SerializeField] string roomName;
-    [SerializeField] GameObject roomPrize;
     [SerializeField] TextMeshProUGUI roomText;
     [SerializeField] float returnMainDelay = 3f;
     [SerializeField] float textDelay = 3f;

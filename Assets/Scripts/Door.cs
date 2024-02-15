@@ -60,7 +60,7 @@ public class Door : MonoBehaviour
         {
             if (isPlayerInDistance && buttonScript.SpinningFinished)
             {
-                isOpen = !isOpen;
+                isOpen = true;
                 doorText.enabled = false;
             }
         }
