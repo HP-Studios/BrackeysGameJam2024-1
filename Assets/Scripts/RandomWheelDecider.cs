@@ -19,10 +19,6 @@ public class RandomWheelDecider : MonoBehaviour
 
     public bool SpinningFinished { get { return spinningFinished; } }
 
-    public void SpinningReset()
-    {
-        spinningFinished = false;
-    }
 
     void Awake()
     {
@@ -33,11 +29,12 @@ public class RandomWheelDecider : MonoBehaviour
 
     void Update()
     {
-        if (isWheelSpining)
+        if (isWheelSpining && !spinningFinished)
         {
             SpinTheWheel();
         }
         isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < playerDistance;
+        Debug.Log(SpinningFinished);
     }
 
     private void SetRandomValues()
@@ -47,7 +44,7 @@ public class RandomWheelDecider : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (isPlayerInDistance)
+        if (isPlayerInDistance && !spinningFinished)
         {
             isWheelSpining = true;
             spinStartTime = Time.time; // Record the time when the spin starts
@@ -64,6 +61,7 @@ public class RandomWheelDecider : MonoBehaviour
         {
             spinningFinished = true;
             isWheelSpining = false;
+
         }
     }
 }

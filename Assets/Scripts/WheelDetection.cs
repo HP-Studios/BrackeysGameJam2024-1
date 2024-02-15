@@ -36,7 +36,6 @@ public class WheelDetection : MonoBehaviour
                     Debug.Log("Error");
                     break;
             }
-            wheelScript.SpinningReset();
         }
     }
 }
