@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e450285e3d14c4d89dd41284b8a876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRoomNumber: 4
+  maxRoomNumber: 5
   usedNumbers: 
   randomRoom: 0
   animator: {fileID: 1526279475}
