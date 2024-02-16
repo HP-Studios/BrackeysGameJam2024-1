@@ -10,6 +10,8 @@ public class Button : MonoBehaviour
     [SerializeField] TextMeshPro buttonText;
     [SerializeField] private Animator pressAnim = null;
     [SerializeField] float playerDistance = 4.0f;
+    [SerializeField] AudioSource wheelAudioSource;
+
     AudioSource buttonAudio;
     bool isPlayerInDistance;
     bool buttonPressed;
@@ -44,6 +46,7 @@ public class Button : MonoBehaviour
         {
             pressAnim.SetTrigger("isPressed");
             buttonAudio.Play();
+            wheelAudioSource.Play();
             buttonText.enabled = false;
             buttonPressed = true;
         }

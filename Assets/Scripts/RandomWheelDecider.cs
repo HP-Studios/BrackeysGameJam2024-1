@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomWheelDecider : MonoBehaviour
 {
     [SerializeField] GameObject wheel;
-
+    [SerializeField] int laps = 4;
     float rotationSpeed; // Start with high rotation speed
     float targetAngle; // The target angle for the wheel to stop at
     bool isWheelSpining; //trigger for starting spin
@@ -15,7 +15,7 @@ public class RandomWheelDecider : MonoBehaviour
     bool isPlayerInDistance;
 
     private float spinStartTime;
-    private float spinDuration = 5.0f; // Spin for 5 seconds
+    [SerializeField] float spinDuration = 5.0f; // Spin for 5 seconds
 
     public bool SpinningFinished { get { return spinningFinished; } }
 
@@ -40,7 +40,7 @@ public class RandomWheelDecider : MonoBehaviour
     private void SetRandomValues()
     {
         targetAngle = Random.Range(0, 360);
-        rotationSpeed = (360 * 5 + targetAngle) / spinDuration; // Calculate rotation speed based on spin duration and target angle
+        rotationSpeed = (360 * laps + targetAngle) / spinDuration; // Calculate rotation speed based on spin duration and target angle
     }
     private void OnMouseDown()
     {
@@ -61,7 +61,6 @@ public class RandomWheelDecider : MonoBehaviour
         {
             spinningFinished = true;
             isWheelSpining = false;
-
         }
     }
 }
