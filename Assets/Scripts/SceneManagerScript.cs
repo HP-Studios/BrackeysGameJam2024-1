@@ -9,6 +9,30 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField] List<int> usedNumbers = new List<int>();
     public int randomRoom;
 
+    [SerializeField] private Animator animator;
+
+
+    void Start()
+    {
+        StartCoroutine(PlayStartAnimationAndWait());
+    }
+
+    IEnumerator PlayStartAnimationAndWait()
+    {
+        animator.Play("Eye Opening"); 
+
+        yield return new WaitForSeconds(2); 
+    }
+
+    IEnumerator PlayEndAnimationAndWait(int sceneIndex)
+    {
+        animator.SetTrigger("closeEye");
+
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(sceneIndex);
+
+    }
+
     int currentSceneIndex;
     private void Awake()
     {
@@ -72,14 +96,14 @@ public class SceneManagerScript : MonoBehaviour
     }
     void LoadRandomScene()
     {
-
-        SceneManager.LoadScene(randomRoom);
+        StartCoroutine(PlayEndAnimationAndWait(randomRoom));
     }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene(currentSceneIndex);
+            StartCoroutine(PlayEndAnimationAndWait(currentSceneIndex));
         }
     }
 }
