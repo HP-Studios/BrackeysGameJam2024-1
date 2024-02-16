@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class NothingRoom : MonoBehaviour
 {
-    [SerializeField] GameObject audio;
+    [SerializeField] GameObject audioHide;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            audio.SetActive(false);
+            audioHide.SetActive(false);
         }
     }
 }

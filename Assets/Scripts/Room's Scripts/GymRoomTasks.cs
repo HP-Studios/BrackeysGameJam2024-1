@@ -18,9 +18,9 @@ public class GymRoomTasks : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
+        if (Input.GetKey(KeyCode.Space) && characterController.isGrounded && jumpAmount != targetJumpAmount)
         {
             jumpAmount++;
             jumpAmountText.text = jumpAmount + "/" +  targetJumpAmount;
