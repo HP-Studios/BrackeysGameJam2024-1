@@ -6,10 +6,15 @@ using UnityEngine;
 public class GymRoomTasks : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI jumpAmountText;
-    [SerializeField] int targetJumpAmount;
-    [SerializeField] int targetCrouchAmount;
+    [SerializeField] private int targetJumpAmount;
     private CharacterController characterController;
     int jumpAmount;
+
+    public int getJumpAmount()
+    {
+        return targetJumpAmount;
+    }
+
     int crouchAmount;
     void Start()
     {
@@ -22,12 +27,12 @@ public class GymRoomTasks : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && characterController.isGrounded && jumpAmount != targetJumpAmount)
         {
             jumpAmount++;
-            jumpAmountText.text = jumpAmount + "/" +  targetJumpAmount;
+            jumpAmountText.text = "Jumping Jacks:  " + jumpAmount + "/" +  targetJumpAmount;
         }
         else if(Input.GetKeyUp(KeyCode.Space) && characterController.isGrounded && jumpAmount != targetJumpAmount)
         {
             jumpAmount++;
-            jumpAmountText.text = jumpAmount + "/" + targetJumpAmount;
+            jumpAmountText.text = "Squat:  " + jumpAmount + "/" + targetJumpAmount;
         }
     }
 }
