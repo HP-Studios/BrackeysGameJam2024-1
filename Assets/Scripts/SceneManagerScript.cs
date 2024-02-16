@@ -23,15 +23,14 @@ public class SceneManagerScript : MonoBehaviour
 
         yield return new WaitForSeconds(2); 
     }
-
     IEnumerator PlayEndAnimationAndWait(int sceneIndex)
     {
         animator.SetTrigger("closeEye");
 
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(sceneIndex);
-
     }
+
 
     int currentSceneIndex;
     private void Awake()
