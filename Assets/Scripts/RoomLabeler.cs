@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(BoxCollider))]
 public class RoomLabeler : MonoBehaviour
 {
     [SerializeField] string roomName;

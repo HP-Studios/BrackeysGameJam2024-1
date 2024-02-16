@@ -106,7 +106,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4777,7 +4777,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -1580535799172915004, guid: 9e51e0f72dec0a84889620cfc8dcf144, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4841,10 +4841,10 @@ GameObject:
   - component: {fileID: 5434969314570749592}
   - component: {fileID: 396919637602863316}
   - component: {fileID: 2264422012919301409}
-  - component: {fileID: 5878791322164461505}
   - component: {fileID: 858327278712430605}
   - component: {fileID: 4080491214437548284}
   - component: {fileID: 6260611232991588837}
+  - component: {fileID: 8151489536614187952}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -4862,7 +4862,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.48, y: 1.218, z: -1.67}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 35125902881436376}
@@ -4875,7 +4875,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8221037774394276368}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4711208715938537054, guid: 9e51e0f72dec0a84889620cfc8dcf144, type: 3}
 --- !u!23 &2264422012919301409
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4896,7 +4896,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -1580535799172915004, guid: 9e51e0f72dec0a84889620cfc8dcf144, type: 3}
+  - {fileID: 9003353085549565770, guid: 9e51e0f72dec0a84889620cfc8dcf144, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4918,27 +4919,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5878791322164461505
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221037774394276368}
-  m_Material: {fileID: 13400000, guid: 80f3ae4280122a249a7613acbbef9e40, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &858327278712430605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4964,7 +4944,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &4080491214437548284
 MonoBehaviour:
@@ -4979,6 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 5182991300004881596}
+  saver: {fileID: 0}
 --- !u!82 &6260611232991588837
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5075,3 +5056,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &8151489536614187952
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221037774394276368}
+  m_Material: {fileID: 13400000, guid: 80f3ae4280122a249a7613acbbef9e40, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.98803097
+  m_Center: {x: -0.000000029802322, y: 0, z: 0}
