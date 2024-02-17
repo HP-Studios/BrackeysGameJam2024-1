@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ball Room.unity
     guid: 1d3cf7f29f7fcd441b198aeb75ae5a2d
+  - enabled: 1
+    path: Assets/Scenes/Gym Room.unity
+    guid: 86381269a4660a040a7d68bb6ec8a126
+  - enabled: 1
+    path: Assets/Scenes/Geometry Room.unity
+    guid: eaefe65e4751358408ef5076f19085ce
+  - enabled: 1
+    path: Assets/Scenes/Space Room.unity
+    guid: 9ae04d5f5dfb44240b09e9e0978d7ff6
   m_configObjects: {}
