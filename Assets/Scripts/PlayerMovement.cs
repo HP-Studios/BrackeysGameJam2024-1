@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float temporarilyRunSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ RUN SPEEDÝ 12YE SABÝTLÝYORDU
     [SerializeField] float temporarilyWalkSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ WALK SPEEDÝ 6YA SABÝTLÝYORDU
 
-    [SerializeField] AudioSource walkSFX;
+    [SerializeField] public AudioSource walkSFX;
     bool isWalkSFXPlaying;
 
     private Vector3 moveDirection = Vector3.zero;
