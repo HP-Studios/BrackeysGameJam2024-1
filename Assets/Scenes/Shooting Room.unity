@@ -4858,7 +4858,7 @@ GameObject:
   - component: {fileID: 2145962186896920866}
   - component: {fileID: 2145962186896920867}
   m_Layer: 0
-  m_Name: 3dTest
+  m_Name: Dummy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
