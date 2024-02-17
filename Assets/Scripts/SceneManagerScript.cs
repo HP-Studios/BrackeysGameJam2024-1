@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class SceneManagerScript : MonoBehaviour
 {
     [SerializeField] int maxRoomNumber;
     [SerializeField] List<int> usedNumbers = new List<int>();
+    [SerializeField] TextMeshPro wheelScore = null;
     public int randomRoom;
 
     [SerializeField] private Animator animator;
@@ -14,6 +16,10 @@ public class SceneManagerScript : MonoBehaviour
 
     void Start()
     {
+        if (wheelScore != null)
+        {
+            wheelScore.text = usedNumbers.Count.ToString() + "/" + maxRoomNumber;
+        }
         StartCoroutine(PlayStartAnimationAndWait());
     }
 
@@ -25,7 +31,7 @@ public class SceneManagerScript : MonoBehaviour
     }
     IEnumerator PlayEndAnimationAndWait(int sceneIndex)
     {
-        animator.SetTrigger("closeEye");
+        animator.Play("Eye Closing");
 
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene(sceneIndex);
@@ -88,6 +94,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            StartCoroutine(PlayStartAnimationAndWait());
             GetUniqueRandomRoom();
             SaveUsedNumbers();
             LoadRandomScene();
