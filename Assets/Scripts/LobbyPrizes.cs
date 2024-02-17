@@ -106,11 +106,4 @@ public class LobbyPrizes : MonoBehaviour
         #endregion
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
 }

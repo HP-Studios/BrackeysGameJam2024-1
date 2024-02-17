@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SandBox/SandBoxFurkan.unity
+    path: Assets/Scenes/Main Room.unity
     guid: 769970c5bbf624e419c1c01ebde85ef6
   - enabled: 1
     path: Assets/Scenes/Nothing Room.unity
