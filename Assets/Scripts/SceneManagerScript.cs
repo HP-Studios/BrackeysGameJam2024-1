@@ -119,8 +119,9 @@ public class SceneManagerScript : MonoBehaviour
     {
         StartCoroutine(PlayEndAnimationAndWait(randomRoom));
     }
-    void TogglePause()
+    public void TogglePause()
     {
+        
         isGamePaused = !isGamePaused;
 
         if (isGamePaused)
@@ -134,6 +135,7 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void PauseGame()
     {
+        Cursor.lockState = CursorLockMode.None;
         playerMovement.enabled = false;
         canvas.enabled = true;
         Time.timeScale = 0f;
@@ -141,6 +143,7 @@ public class SceneManagerScript : MonoBehaviour
 
     public void ResumeGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerMovement.enabled = true;
         canvas.enabled = false;
         Time.timeScale = 1f;
