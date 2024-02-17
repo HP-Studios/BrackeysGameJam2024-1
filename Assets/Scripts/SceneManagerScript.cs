@@ -9,15 +9,18 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField] int maxRoomNumber;
     [SerializeField] List<int> usedNumbers = new List<int>();
     [SerializeField] TextMeshPro wheelScore = null;
+    [SerializeField] PlayerMovement playerMovement = null;
     public int randomRoom;
-
+    private bool isGamePaused = false;
     [SerializeField] private Animator animator;
-
+    Canvas canvas;
     public float totalTimer;
 
     void Start()
     {
-       
+        canvas = GetComponentInChildren<Canvas>();
+        canvas.enabled = false;
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (PlayerPrefs.HasKey("Timer"))
         {
             totalTimer = PlayerPrefs.GetFloat("Timer");
@@ -116,7 +119,32 @@ public class SceneManagerScript : MonoBehaviour
     {
         StartCoroutine(PlayEndAnimationAndWait(randomRoom));
     }
+    void TogglePause()
+    {
+        isGamePaused = !isGamePaused;
 
+        if (isGamePaused)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
+    public void PauseGame()
+    {
+        playerMovement.enabled = false;
+        canvas.enabled = true;
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        playerMovement.enabled = true;
+        canvas.enabled = false;
+        Time.timeScale = 1f;
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.R))
@@ -128,6 +156,11 @@ public class SceneManagerScript : MonoBehaviour
         {
             totalTimer += Time.deltaTime;
             PlayerPrefs.SetFloat("Timer", totalTimer);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
         }
     }
 }
