@@ -13,9 +13,21 @@ public class SceneManagerScript : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    public float totalTimer;
 
     void Start()
     {
+       
+        if (PlayerPrefs.HasKey("Timer"))
+        {
+            totalTimer = PlayerPrefs.GetFloat("Timer");
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("Timer", 0);
+        }
+           
+
         if (wheelScore != null)
         {
             wheelScore.text = usedNumbers.Count.ToString() + "/" + maxRoomNumber;
@@ -110,6 +122,12 @@ public class SceneManagerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             StartCoroutine(PlayEndAnimationAndWait(currentSceneIndex));
+        }
+
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            totalTimer += Time.deltaTime;
+            PlayerPrefs.SetFloat("Timer", totalTimer);
         }
     }
 }

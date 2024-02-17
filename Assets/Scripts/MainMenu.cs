@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject HTP_Menu;
     [SerializeField] GameObject creditMenu;
     [SerializeField] GameObject resetMenu;
+
     private void Update()
     {
         transform.Rotate(new Vector3(0, 1, 0) * rotationSpeed * Time.deltaTime);
