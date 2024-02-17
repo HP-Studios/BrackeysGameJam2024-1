@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float temporarilyRunSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ RUN SPEEDÝ 12YE SABÝTLÝYORDU
     [SerializeField] float temporarilyWalkSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ WALK SPEEDÝ 6YA SABÝTLÝYORDU
 
+    [SerializeField] AudioSource walkSFX;
+    bool isWalkSFXPlaying;
+
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private CharacterController characterController;
@@ -30,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isWalkSFXPlaying = false;
     }
 
     void Update()
@@ -42,6 +46,21 @@ public class PlayerMovement : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+
+        if(curSpeedX != 0 ||  curSpeedY != 0)
+        {
+            if (!isWalkSFXPlaying)
+            {
+                walkSFX.Play();
+                isWalkSFXPlaying = true;
+            }
+        }
+        else
+        {
+            walkSFX.Stop();
+            isWalkSFXPlaying = false;
+        }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {

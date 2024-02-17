@@ -23,11 +23,11 @@ public class GunShoot : MonoBehaviour
     //Reference
     [SerializeField] Transform attackPoint;
 
-
+    [SerializeField] AudioSource gunSFX;
     [SerializeField] GameObject shellPrefab, bulletPrefab;
-    [SerializeField] TextMeshProUGUI text;
+    //[SerializeField] TextMeshProUGUI text;
 
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject playerCamera;
 
     private void Awake()
     {
@@ -37,8 +37,7 @@ public class GunShoot : MonoBehaviour
     private void Update()
     {
         MyInput();
-
-        text.SetText(bulletsLeft + " / " + magazineSize);
+        //text.SetText(bulletsLeft + " / " + magazineSize);
     }
     private void MyInput()
     {
@@ -58,14 +57,15 @@ public class GunShoot : MonoBehaviour
     private void Shoot()
     {
         readyToShoot = false;
+        gunSFX.Play();
 
         //Spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
         //Calculate Direction with Spread
-        Vector3 directionSpread = player.transform.forward + new Vector3(x, y, 0);
-        Vector3 direction = player.transform.forward;
+        Vector3 directionSpread = playerCamera.transform.forward + new Vector3(x, y, 0);
+        Vector3 direction = playerCamera.transform.forward;
 
         // Instantiate bullet
         GameObject bullet = Instantiate(bulletPrefab, attackPoint.position, Quaternion.identity);

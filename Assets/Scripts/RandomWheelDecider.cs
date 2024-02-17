@@ -34,7 +34,6 @@ public class RandomWheelDecider : MonoBehaviour
             SpinTheWheel();
         }
         isPlayerInDistance = Vector3.Distance(transform.position, Camera.main.transform.position) < playerDistance;
-        Debug.Log(SpinningFinished);
     }
 
     private void SetRandomValues()
