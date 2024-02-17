@@ -22246,6 +22246,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
+      propertyPath: m_text
+      value: '- Find The Hidden Ball'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4836356755349677729, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25

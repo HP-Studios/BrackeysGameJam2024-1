@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
+      propertyPath: m_text
+      value: '- Find The Earth Among the stars'
+      objectReference: {fileID: 0}
     - target: {fileID: 5308696620073951059, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_Pivot.x
       value: 0
