@@ -10,7 +10,6 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float typingSpeed;
     [SerializeField] private float pauseBetweenSentences = 1f;
     private int index = 0;
-    private bool isTyping = false;
 
     private void Start()
     {
@@ -19,7 +18,6 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeSentence()
     {
-        isTyping = true;
         textDisplay.text = ""; 
 
         foreach (char letter in sentences[index].ToCharArray())
@@ -28,7 +26,6 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        isTyping = false;
         yield return new WaitForSeconds(pauseBetweenSentences); 
 
         if (index < sentences.Length - 1)

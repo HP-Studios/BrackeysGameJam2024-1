@@ -174,12 +174,20 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastPivotPosition",
+<<<<<<< Updated upstream
                 "value": "{\"m_Value\":{\"x\":-0.25,\"y\":-0.25,\"z\":-0.25}}"
+=======
+                "value": "{\"m_Value\":{\"x\":-0.5566563606262207,\"y\":-0.5126074552536011,\"z\":-0.8293044567108154}}"
+>>>>>>> Stashed changes
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize",
+<<<<<<< Updated upstream
                 "value": "{\"m_Value\":{\"x\":0.5,\"y\":0.5,\"z\":0.5}}"
+=======
+                "value": "{\"m_Value\":{\"x\":1.1133131980895997,\"y\":1.0252147912979127,\"z\":1.6586086750030518}}"
+>>>>>>> Stashed changes
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

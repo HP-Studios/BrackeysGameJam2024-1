@@ -12,6 +12,9 @@ TagManager:
   - Green
   - Squat
   - Deadlift
+  - AK47
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
