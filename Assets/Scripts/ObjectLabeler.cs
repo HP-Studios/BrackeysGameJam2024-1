@@ -9,13 +9,15 @@ public class ObjectLabeler : MonoBehaviour
     TextMeshPro objectName;
     private void Start()
     {
-        objectName = GetComponent<TextMeshPro>();
+        objectName = GetComponentInChildren<TextMeshPro>();
         objectName.text = objectLabel;
         objectName.enabled = false;
     }
     private void OnMouseOver()
     {
         objectName.enabled = true;
+        Transform player = Camera.main.transform;
+        objectName.transform.LookAt(2 * objectName.transform.position - player.position);
     }
     private void OnMouseExit()
     {

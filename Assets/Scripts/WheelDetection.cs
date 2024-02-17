@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class WheelDetection : MonoBehaviour
 {
-    [SerializeField] private RandomWheelDecider wheelScript;
+    [SerializeField] RandomWheelDecider wheelScript;
+    [SerializeField] Light doorLight;
     private void OnTriggerStay(Collider other)
     {
         if (wheelScript.SpinningFinished)
@@ -15,22 +16,22 @@ public class WheelDetection : MonoBehaviour
             switch (objTag)
             {
                 case "Purple":
-                    Debug.Log("Purple");
+                    doorLight.color = new Color(0.5f, 0, 0.5f);
                     break;
                 case "Yellow":
-                    Debug.Log("Yellow");
+                    doorLight.color = Color.yellow;
                     break;
                 case "Red":
-                    Debug.Log("Red");
+                    doorLight.color = Color.red;
                     break;
                 case "Blue":
-                    Debug.Log("Blue");
+                    doorLight.color = Color.blue;
                     break;
                 case "Orange":
-                    Debug.Log("Orange");
+                    doorLight.color = new Color(1f, 0.5418492f, 0f);
                     break;
                 case "Green":
-                    Debug.Log("Green");
+                    doorLight.color = Color.green;
                     break;
                 default:
                     Debug.Log("Error");
