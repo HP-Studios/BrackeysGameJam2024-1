@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletShell : MonoBehaviour
 {
-
-    private void OnCollisionEnter(Collision collision)
+    // Start is called before the first frame update
+    void Start()
     {
-      
-        gameObject.GetComponent<SphereCollider>().enabled = false;
         StartCoroutine(WaitFor2Seconds());
-        
+
     }
+
+    
     IEnumerator WaitFor2Seconds()
     {
         yield return new WaitForSeconds(2);

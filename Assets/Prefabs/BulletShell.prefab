@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6928708321287306270}
   - component: {fileID: 6224465263551940144}
   - component: {fileID: 7711196984306385471}
+  - component: {fileID: 2876968986763209229}
   - component: {fileID: 1534343887899226980}
   m_Layer: 0
   m_Name: BulletShell
@@ -84,6 +85,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2876968986763209229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308786920505560743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a3625f2d232004396fad0d3a177e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1534343887899226980
 Rigidbody:
   m_ObjectHideFlags: 0
