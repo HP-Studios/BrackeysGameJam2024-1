@@ -50,10 +50,16 @@ public class PlayerMovement : MonoBehaviour
 
         if(curSpeedX != 0 ||  curSpeedY != 0)
         {
-            if (!isWalkSFXPlaying)
+            if (!isWalkSFXPlaying && characterController.isGrounded)
             {
                 walkSFX.Play();
                 isWalkSFXPlaying = true;
+            }
+            else if(!characterController.isGrounded)
+            {
+                isWalkSFXPlaying = false;
+
+                walkSFX.Stop();
             }
         }
         else

@@ -8,10 +8,27 @@ public class WoodenChestScript : MonoBehaviour
     [SerializeField] private TextMeshPro chestClose;
     [SerializeField] private TextMeshPro chestOpen;
 
-    [SerializeField] GameObject chestTop;
+    [SerializeField] private GameObject box;
+
+    private void Awake()
+    {
+        chestOpen.enabled = false;
+
+    }
+
     private void OnMouseDown()
     {
-        chestTop.transform.rotation = Quaternion.Euler(-90, 0, 0);
+        StartCoroutine(EndTheGame());
+    }
+
+    IEnumerator EndTheGame()
+    {
+        //2 saniyelik animasyon oynat
+        yield return new WaitForSeconds(2);
+        chestClose.enabled = false;
+        chestOpen.enabled = true;
+        yield return new WaitForSeconds(2);
+        box.SetActive(true);
     }
 
 }
