@@ -95,4 +95,9 @@ public class MainMenu : MonoBehaviour
     {
         resetMenu.SetActive(true);
     }
+    public void DeleteConfirm()
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Player Prefs Deleted");
+    }
 }
