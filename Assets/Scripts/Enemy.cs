@@ -8,46 +8,21 @@ public class Enemy : MonoBehaviour
     private TextMeshPro healthName;
     private int health = 3;
     private int maxHealth = 3;
-    public float moveDistance = 5f;
+    public float moveForce = 10f;
+    public float maxSpeed = 5f;
+
+    private Rigidbody rb;
 
     void Start()
     {
-        StartCoroutine(MoveRandomly());
+        rb = GetComponent<Rigidbody>();
+        ApplyRandomForce();
     }
 
-    IEnumerator MoveRandomly()
+    void ApplyRandomForce()
     {
-        while (true)
-        {
-            MoveInRandomDirection();
-            yield return new WaitForSeconds(1f); // Add a delay for a more realistic effect
-        }
-    }
-
-    void MoveInRandomDirection()
-    {
-        string[] directions = { "up", "down", "left", "right" };
-        string direction = directions[Random.Range(0, directions.Length)];
-        Vector3 movement = Vector3.zero;
-
-        switch (direction)
-        {
-            case "up":
-                movement = Vector3.up;
-                break;
-            case "down":
-                movement = Vector3.down;
-                break;
-            case "left":
-                movement = Vector3.left;
-                break;
-            case "right":
-                movement = Vector3.right;
-                break;
-        }
-
-        transform.Translate(movement * moveDistance);
-        Debug.Log($"Enemy moves {moveDistance} units {direction}.");
+        Vector3 randomDirection = Random.onUnitSphere; // Random point on the surface of a sphere
+        rb.AddForce(randomDirection * moveForce, ForceMode.Impulse);
     }
     private void Awake()
     {
@@ -71,6 +46,8 @@ public class Enemy : MonoBehaviour
     {
         Transform player = Camera.main.transform;
         healthName.transform.LookAt(2 * healthName.transform.position - player.position);
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        ApplyRandomForce();
     }
 
 }
