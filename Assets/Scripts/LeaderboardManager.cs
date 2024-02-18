@@ -38,8 +38,8 @@ namespace LeaderBoard
                 var length = Mathf.Min(_entryTextObjects.Length, orderedEntries.Length);
                 for (int i = 0; i < length; i++)
                 {
-                    int hour = (int)Score / 3600;
-                    int remainingSeconds = (int)Score % 3600;
+                    int hour = entries[i].Score / 3600;
+                    int remainingSeconds = entries[i].Score % 3600;
                     int minute = remainingSeconds / 60;
                     int seconds = remainingSeconds % 60;
                     string tempText = hour + "h " + minute + "m " + seconds + "s.";
