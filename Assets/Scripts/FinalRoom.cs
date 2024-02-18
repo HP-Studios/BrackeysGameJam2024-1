@@ -65,7 +65,7 @@ public class FinalRoom : MonoBehaviour
         image.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         goodbyeText.SetActive(true);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(10);
         inputField.SetActive(true);
         inputFieldButton.SetActive(true);
         inputFieldImage.SetActive(true);

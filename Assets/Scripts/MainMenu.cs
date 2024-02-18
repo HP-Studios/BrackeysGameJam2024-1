@@ -29,7 +29,17 @@ public class MainMenu : MonoBehaviour
 
     private void StartGameSequance()
     {
-        SceneManager.LoadScene(0);
+        if(PlayerPrefs.HasKey("In Room"))
+        {
+            int loadScene = PlayerPrefs.GetInt("In Room");
+            SceneManager.LoadScene(loadScene);
+
+        }
+        else
+        {
+            PlayerPrefs.SetInt("In Room", 0);
+            SceneManager.LoadScene(0);
+        }
     }
     public void SetFalseAllParameters()
     {
