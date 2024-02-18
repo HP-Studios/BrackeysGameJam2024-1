@@ -48,6 +48,6 @@ public class RoomLabeler : MonoBehaviour
     void ReturnMainRoom()
     {
         PlayerPrefs.SetInt(roomName, 1);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(11);
     }
 }

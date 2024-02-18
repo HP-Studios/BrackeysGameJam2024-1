@@ -45,8 +45,8 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("In Room", 0);
-            SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("In Room", 11);
+            SceneManager.LoadScene(11);
         }
     }
     public void SetFalseAllParameters()
