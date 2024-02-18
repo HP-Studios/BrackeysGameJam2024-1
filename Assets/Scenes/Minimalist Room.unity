@@ -2887,6 +2887,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6346766166771032805, guid: b28b659c17d999e4e80402914085ddda, type: 3}
+      propertyPath: lookSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346766166771032805, guid: b28b659c17d999e4e80402914085ddda, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1599798072}

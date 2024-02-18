@@ -18,6 +18,14 @@ public class MainMenu : MonoBehaviour
         transform.Rotate(new Vector3(0, 1, 0) * rotationSpeed * Time.deltaTime);
         //transform.Rotate(new Vector3(0, 0, 0) * rotationSpeed * Time.deltaTime);
         //transform.Rotate(new Vector3(0, 0, 0) * rotationSpeed * Time.deltaTime);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    private void Awake()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
     public void StartGame()
@@ -37,8 +45,8 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("In Room", 0);
-            SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("In Room", 11);
+            SceneManager.LoadScene(11);
         }
     }
     public void SetFalseAllParameters()

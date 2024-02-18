@@ -12463,6 +12463,10 @@ PrefabInstance:
       propertyPath: walkSFX
       value: 
       objectReference: {fileID: 1644060822}
+    - target: {fileID: 6346766166771032805, guid: b28b659c17d999e4e80402914085ddda, type: 3}
+      propertyPath: lookSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7561092118177261765, guid: b28b659c17d999e4e80402914085ddda, type: 3}
       propertyPath: m_Radius
       value: 0.58818805

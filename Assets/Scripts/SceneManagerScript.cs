@@ -15,11 +15,22 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField] private Animator animator;
     Canvas canvas;
     public float totalTimer;
-    private bool isFullscreen = true;
+    private bool finalSceneDone;
     private int roomIndex;
     void Start()
     {
-       
+        if (PlayerPrefs.HasKey("FinalDone"))
+        {
+            if(PlayerPrefs.GetInt("FinalDone") == 1)
+            {
+                finalSceneDone = true;
+            }
+            else
+            {           
+                finalSceneDone = false;
+
+            }
+        }
         canvas = GetComponentInChildren<Canvas>();
         canvas.enabled = false;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -79,7 +90,16 @@ public class SceneManagerScript : MonoBehaviour
             } while (usedNumbers.Contains(randomRoom));
             usedNumbers.Add(randomRoom);
         }
-        else { SceneManager.LoadScene(10); } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
+        else {
+            if (!finalSceneDone)
+            {
+                SceneManager.LoadScene(10);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
+        } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
     }
 
     void SaveUsedNumbers()
@@ -143,6 +163,7 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void PauseGame()
     {
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerMovement.enabled = false;
         canvas.enabled = true;
@@ -152,6 +173,7 @@ public class SceneManagerScript : MonoBehaviour
     public void ResumeGame()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         playerMovement.enabled = true;
         canvas.enabled = false;
         Time.timeScale = 1f;
@@ -174,36 +196,19 @@ public class SceneManagerScript : MonoBehaviour
         {
             TogglePause();
         }
-
-        if (Input.GetKeyDown(KeyCode.F11))
-        {
-            ToggleFullscreen();
-        }
     }
     public void ReturnMainMenu()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(0);
     }
     public void UnlockMouse()
     {
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void LockMouse()
     {
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-    }
-    void ToggleFullscreen()
-    {
-        isFullscreen = !isFullscreen;
-        if (isFullscreen)
-        {
-            // Set the screen resolution to the desktop resolution when entering fullscreen
-            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
-        }
-        else
-        {
-            // Set your desired resolution when exiting fullscreen
-            Screen.SetResolution(1280, 720, false);
-        }
     }
 }
