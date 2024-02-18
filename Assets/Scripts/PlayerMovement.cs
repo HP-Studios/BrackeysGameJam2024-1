@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            //jumpSFX.Play();
+            jumpSFX.Play();
             moveDirection.y = jumpPower;
         }
         else
