@@ -18,6 +18,14 @@ public class MainMenu : MonoBehaviour
         transform.Rotate(new Vector3(0, 1, 0) * rotationSpeed * Time.deltaTime);
         //transform.Rotate(new Vector3(0, 0, 0) * rotationSpeed * Time.deltaTime);
         //transform.Rotate(new Vector3(0, 0, 0) * rotationSpeed * Time.deltaTime);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    private void Awake()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
     public void StartGame()

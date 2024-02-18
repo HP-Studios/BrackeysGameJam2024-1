@@ -143,6 +143,7 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void PauseGame()
     {
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerMovement.enabled = false;
         canvas.enabled = true;
@@ -152,6 +153,7 @@ public class SceneManagerScript : MonoBehaviour
     public void ResumeGame()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         playerMovement.enabled = true;
         canvas.enabled = false;
         Time.timeScale = 1f;
@@ -181,10 +183,12 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void UnlockMouse()
     {
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void LockMouse()
     {
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }
