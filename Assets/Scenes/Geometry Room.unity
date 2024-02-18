@@ -736,6 +736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 961281937691863235, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3414792305154146043, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: animator
       value: 
@@ -744,6 +748,18 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 245631811}
+    - target: {fileID: 4468764200501982228, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011469507052166674, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6429924808738976284, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7062161607721569360, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: m_LocalPosition.x
       value: 826.1278
@@ -2298,6 +2314,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76d3f10b1706951438601967382c19e3, type: 2}
+    - target: {fileID: 4242429667857915394, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8149003780937887541, guid: a0d5b9a53a5caed4d832eb42a7a3f216, type: 2}
     - target: {fileID: 4581345885493155257, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -23008,6 +23028,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76d3f10b1706951438601967382c19e3, type: 2}
+    - target: {fileID: 4242429667857915394, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8149003780937887541, guid: a0d5b9a53a5caed4d832eb42a7a3f216, type: 2}
     - target: {fileID: 4581345885493155257, guid: 29fa48dd8fb34914a98dfc843c9032f3, type: 3}
       propertyPath: m_Mesh
       value: 
