@@ -4,7 +4,8 @@ using TMPro;
 // NOTE: Make sure to include the following namespace wherever you want to access Leaderboard Creator methods
 using Dan.Main;
 
-
+namespace LeaderBoard
+{
     public class LeaderboardManager : MonoBehaviour
     {
         [SerializeField] private TMP_Text[] _entryTextObjects;
@@ -39,10 +40,12 @@ using Dan.Main;
 
         public void UploadEntry()
         {
-            Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
+            //Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
+            Leaderboards.SpinToUnknown.UploadNewEntry("Mert", (int)Score, isSuccessful =>
             {
                 if (isSuccessful)
                     LoadEntries();
             });
         }
     }
+}
