@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float temporarilyWalkSpeed = 9f; //BEN EKLEDÝM YOKSA SÜREKLÝ WALK SPEEDÝ 6YA SABÝTLÝYORDU
 
     [SerializeField] public AudioSource walkSFX;
+    [SerializeField] public AudioSource jumpSFX;
     bool isWalkSFXPlaying;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
+            jumpSFX.Play();
             moveDirection.y = jumpPower;
         }
         else
