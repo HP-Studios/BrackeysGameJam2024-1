@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+using System.Linq;
 // NOTE: Make sure to include the following namespace wherever you want to access Leaderboard Creator methods
 using Dan.Main;
 
@@ -32,11 +32,26 @@ namespace LeaderBoard
             {
                 foreach (var t in _entryTextObjects)
                     t.text = "";
-                var length = Mathf.Min(_entryTextObjects.Length, entries.Length);
+                // Order the entries by score in ascending order
+                var orderedEntries = entries.OrderBy(e => e.Score).ToArray();
+                orderedEntries.Reverse();
+                var length = Mathf.Min(_entryTextObjects.Length, orderedEntries.Length);
                 for (int i = 0; i < length; i++)
-                    _entryTextObjects[i].text = $"{entries[i].Rank}. {entries[i].Username} - {entries[i].Score}";
+                {
+                    int hour = (int)Score / 3600;
+                    int remainingSeconds = (int)Score % 3600;
+                    int minute = remainingSeconds / 60;
+                    int seconds = remainingSeconds % 60;
+                    string tempText = hour + "h " + minute + "m " + seconds + "s.";
+
+
+                    _entryTextObjects[i].text = $"{i + 1}. {orderedEntries[i].Username} - {tempText}";
+                    
+                }
+
             });
         }
+
 
         public void UploadEntry()
         {
