@@ -7,11 +7,12 @@ public class WoodenChestScript : MonoBehaviour
 {
     [SerializeField] private TextMeshPro chestClose;
     [SerializeField] private TextMeshPro chestOpen;
-
+    [SerializeField] Animator chestAnimator;
     [SerializeField] private GameObject box;
 
     private void Awake()
     {
+        chestAnimator = GetComponentInChildren<Animator>();
         chestOpen.enabled = false;
 
     }
@@ -23,7 +24,7 @@ public class WoodenChestScript : MonoBehaviour
 
     IEnumerator EndTheGame()
     {
-        //2 saniyelik animasyon oynat
+        chestAnimator.SetBool("isOpen", true);
         yield return new WaitForSeconds(2);
         chestClose.enabled = false;
         chestOpen.enabled = true;
