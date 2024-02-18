@@ -32,10 +32,8 @@ namespace LeaderBoard
             {
                 foreach (var t in _entryTextObjects)
                     t.text = "";
-                // Order the entries by score in ascending order
-                var orderedEntries = entries.OrderBy(e => e.Score).ToArray();
-                orderedEntries.Reverse();
-                var length = Mathf.Min(_entryTextObjects.Length, orderedEntries.Length);
+
+                var length = Mathf.Min(_entryTextObjects.Length, entries.Length);
                 for (int i = 0; i < length; i++)
                 {
                     int hour = entries[i].Score / 3600;
@@ -45,8 +43,7 @@ namespace LeaderBoard
                     string tempText = hour + "h " + minute + "m " + seconds + "s.";
 
 
-                    _entryTextObjects[i].text = $"{i + 1}. {orderedEntries[i].Username} - {tempText}";
-                    
+                    _entryTextObjects[i].text = $"{entries[i].Rank}. {entries[i].Username} - {tempText}";
                 }
 
             });
