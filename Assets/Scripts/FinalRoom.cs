@@ -37,7 +37,12 @@ public class FinalRoom : MonoBehaviour
         {
             numOfSecs += Time.deltaTime;
             PlayerPrefs.SetFloat("Timer", numOfSecs);
-            timer.text = "Your Time:\n" + TimeSpan.FromSeconds(numOfSecs).Hours + "h " + TimeSpan.FromSeconds(numOfSecs).Minutes + "m " + TimeSpan.FromSeconds(numOfSecs).Seconds + "s.";
+            int hour = (int)numOfSecs / 3600;
+            int remainingSeconds = (int)numOfSecs % 3600;
+            int minute = remainingSeconds / 60;
+            int seconds = remainingSeconds % 60;
+            string tempText = hour + "h " + minute + "m " + seconds + "s.";
+            timer.text = "Your Time:\n" + tempText;
         }
     
     }
