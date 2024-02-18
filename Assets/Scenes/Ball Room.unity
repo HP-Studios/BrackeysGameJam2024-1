@@ -12373,6 +12373,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5704683052641906062, guid: b28b659c17d999e4e80402914085ddda, type: 3}
   m_PrefabInstance: {fileID: 245631809}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &245631811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6346766166771032805, guid: b28b659c17d999e4e80402914085ddda, type: 3}
+  m_PrefabInstance: {fileID: 245631809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423271805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71bb2c94c81de447af9aa34812144b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &253190670
 Mesh:
   m_ObjectHideFlags: 0
@@ -22442,6 +22453,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1740135877}
+    - target: {fileID: 3414792305154146043, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 245631811}
     - target: {fileID: 7062161607721569360, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: m_LocalPosition.x
       value: 826.1278

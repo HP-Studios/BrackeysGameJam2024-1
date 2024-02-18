@@ -175,4 +175,16 @@ public class SceneManagerScript : MonoBehaviour
             TogglePause();
         }
     }
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }
