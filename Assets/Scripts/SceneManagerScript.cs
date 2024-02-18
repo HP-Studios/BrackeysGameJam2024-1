@@ -79,7 +79,7 @@ public class SceneManagerScript : MonoBehaviour
             } while (usedNumbers.Contains(randomRoom));
             usedNumbers.Add(randomRoom);
         }
-        else { SaveUsedNumbers(); } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
+        else { SceneManager.LoadScene(10); } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
     }
 
     void SaveUsedNumbers()
