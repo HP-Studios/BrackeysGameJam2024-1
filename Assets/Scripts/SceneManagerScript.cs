@@ -15,7 +15,7 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField] private Animator animator;
     Canvas canvas;
     public float totalTimer;
-
+    private bool isFullscreen = true;
     private int roomIndex;
     void Start()
     {
@@ -174,6 +174,11 @@ public class SceneManagerScript : MonoBehaviour
         {
             TogglePause();
         }
+
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            ToggleFullscreen();
+        }
     }
     public void ReturnMainMenu()
     {
@@ -186,5 +191,19 @@ public class SceneManagerScript : MonoBehaviour
     public void LockMouse()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+    void ToggleFullscreen()
+    {
+        isFullscreen = !isFullscreen;
+        if (isFullscreen)
+        {
+            // Set the screen resolution to the desktop resolution when entering fullscreen
+            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+        }
+        else
+        {
+            // Set your desired resolution when exiting fullscreen
+            Screen.SetResolution(1280, 720, false);
+        }
     }
 }
