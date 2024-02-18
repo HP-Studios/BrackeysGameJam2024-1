@@ -16,11 +16,19 @@ public class SceneManagerScript : MonoBehaviour
     Canvas canvas;
     public float totalTimer;
 
+    private int roomIndex;
     void Start()
     {
+       
         canvas = GetComponentInChildren<Canvas>();
         canvas.enabled = false;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+
+        PlayerPrefs.SetInt("In Room", currentSceneIndex);
+        
+
+
         if (PlayerPrefs.HasKey("Timer"))
         {
             totalTimer = PlayerPrefs.GetFloat("Timer");
@@ -150,12 +158,13 @@ public class SceneManagerScript : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R) && SceneManager.GetActiveScene().name != "Final Room")
         {
-            StartCoroutine(PlayEndAnimationAndWait(currentSceneIndex));
+            int temp = PlayerPrefs.GetInt("In Room");
+            StartCoroutine(PlayEndAnimationAndWait(temp));
         }
 
-        if (SceneManager.GetActiveScene().name != "MainMenu")
+        if (SceneManager.GetActiveScene().name != "Main Menu" && SceneManager.GetActiveScene().name != "Final Room")
         {
             totalTimer += Time.deltaTime;
             PlayerPrefs.SetFloat("Timer", totalTimer);
