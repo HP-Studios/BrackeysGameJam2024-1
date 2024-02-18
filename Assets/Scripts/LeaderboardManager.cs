@@ -40,8 +40,7 @@ namespace LeaderBoard
 
         public void UploadEntry()
         {
-            //Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
-            Leaderboards.SpinToUnknown.UploadNewEntry("Mert", (int)Score, isSuccessful =>
+            Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
             {
                 if (isSuccessful)
                     LoadEntries();
