@@ -8798,7 +8798,7 @@ PrefabInstance:
       objectReference: {fileID: 722422398}
     - target: {fileID: 3414792305154146043, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: maxRoomNumber
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3414792305154146043, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: playerMovement
