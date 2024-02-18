@@ -18,6 +18,12 @@ public class FinalRoom : MonoBehaviour
 
     [SerializeField] GameObject image;
     [SerializeField] GameObject goodbyeText;
+
+    [SerializeField] GameObject inputFieldImage;
+    [SerializeField] GameObject inputFieldButton;
+    [SerializeField] GameObject inputField;
+
+        
     private void Start()
     {
         isDone = false;
@@ -41,7 +47,6 @@ public class FinalRoom : MonoBehaviour
         if (isPlayerInDistance)
         {
             isDone = true;
-            finalBox.SetActive(true);
             StartCoroutine(WaitForFinal());
         }
     }
@@ -50,11 +55,25 @@ public class FinalRoom : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
         movementScript.enabled = false;
+        finalBox.SetActive(true);
         movementScript.walkSFX.Stop();
         image.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         goodbyeText.SetActive(true);
-        yield return new WaitForSeconds(14);
+        yield return new WaitForSeconds(6);
+        inputField.SetActive(true);
+        inputFieldButton.SetActive(true);
+        inputFieldImage.SetActive(true);
         goodbyeText.SetActive(false);
+        image.SetActive(false);
+        UnlockMouse(); 
+    }
+    public void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
