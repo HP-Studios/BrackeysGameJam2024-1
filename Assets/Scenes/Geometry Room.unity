@@ -752,6 +752,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5242308785506847398, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 795094901}
+    - target: {fileID: 5242308785506847398, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 6011469507052166674, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -800,6 +808,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8239479404122428460, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 795094901}
+    - target: {fileID: 8239479404122428460, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 8272376137878464924, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -809,6 +825,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+--- !u!114 &140896878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5242308785506847398, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+  m_PrefabInstance: {fileID: 140896877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &140896879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8239479404122428460, guid: c607fe45bcb9d454ea806d07fb9f9046, type: 3}
+  m_PrefabInstance: {fileID: 140896877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &196226100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2968,6 +3006,82 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &795094900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225271200744477141, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254744524707070093, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: m_Name
+      value: Sound Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129514884205128281, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 140896878}
+    - target: {fileID: 9129514884205128281, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 140896879}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+--- !u!114 &795094901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9129514884205128281, guid: 840e1c64fd33ae04c9c92017720f1916, type: 3}
+  m_PrefabInstance: {fileID: 795094900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc720cf1fec114f4b8c9f6dcec500692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &830659377
 GameObject:
   m_ObjectHideFlags: 0
@@ -25122,8 +25236,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289920918
+  m_fontColor: {r: 0.58805025, g: 1, b: 0.69722515, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25513,3 +25627,4 @@ SceneRoots:
   - {fileID: 1585398393}
   - {fileID: 5805025973659437754}
   - {fileID: 4045600072763325725}
+  - {fileID: 795094900}
