@@ -41,7 +41,7 @@ public class SceneManagerScript : MonoBehaviour
 
         if (wheelScore != null)
         {
-            wheelScore.text = usedNumbers.Count.ToString() + "/" + maxRoomNumber;
+            wheelScore.text = usedNumbers.Count.ToString() + "/10";
         }
         StartCoroutine(PlayStartAnimationAndWait());
     }
