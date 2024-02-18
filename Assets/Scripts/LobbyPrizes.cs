@@ -11,6 +11,8 @@ public class LobbyPrizes : MonoBehaviour
     [SerializeField] GameObject GalaxyRoom;
     [SerializeField] GameObject GeometryRoom;
     [SerializeField] GameObject MinimalistRoom;
+    [SerializeField] GameObject MazeRoom;
+    [SerializeField] GameObject KillerRoom;
     private void Awake()
     {
         #region Nothing Room
@@ -102,6 +104,32 @@ public class LobbyPrizes : MonoBehaviour
         else
         {
             MinimalistRoom.SetActive(false);
+        }
+        #endregion
+        #region Treasure  Room
+        if (PlayerPrefs.HasKey("Treasure Behind The Door"))
+        {
+            if (PlayerPrefs.GetInt("Treasure Behind The Door") == 1)
+            {
+                MazeRoom.SetActive(true);
+            }
+        }
+        else
+        {
+            MazeRoom.SetActive(false);
+        }
+        #endregion
+        #region Killer Room
+        if (PlayerPrefs.HasKey("Killer Behind The Door"))
+        {
+            if (PlayerPrefs.GetInt("Killer Behind The Door") == 1)
+            {
+                KillerRoom.SetActive(true);
+            }
+        }
+        else
+        {
+            KillerRoom.SetActive(false);
         }
         #endregion
     }
