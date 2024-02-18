@@ -632,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_text
-      value: '*Finish The Parkour Of Shapes'
+      value: -Finish The Parkour Of Shapes
       objectReference: {fileID: 0}
     - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_HorizontalAlignment

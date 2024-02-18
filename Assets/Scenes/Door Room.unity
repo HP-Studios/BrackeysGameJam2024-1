@@ -4006,7 +4006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &288314179
 BoxCollider:
@@ -5271,7 +5271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &492776667
 BoxCollider:
@@ -6683,7 +6683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &851658441
 BoxCollider:
@@ -7802,7 +7802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390371548166166684, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_text
-      value: '* Find The Correct Path'
+      value: '- Find The Correct Path'
       objectReference: {fileID: 0}
     - target: {fileID: 5308696620073951059, guid: 0d9818c61068de942993578153166d71, type: 3}
       propertyPath: m_Pivot.x
@@ -7951,7 +7951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &1081515749
 BoxCollider:
@@ -8208,7 +8208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 1
 --- !u!65 &1264144495
 BoxCollider:
@@ -8993,7 +8993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &1334434185
 BoxCollider:
@@ -11156,7 +11156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 0
 --- !u!65 &1705308423
 BoxCollider:
@@ -11202,7 +11202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 1
 --- !u!65 &1717039977
 BoxCollider:
@@ -12594,8 +12594,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Wrong Door!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e60ff48ffe0de31498e829bfe1125d12, type: 2}
+  m_sharedMaterial: {fileID: -7918834301259567586, guid: e60ff48ffe0de31498e829bfe1125d12, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12692,7 +12692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failText: {fileID: 2079804499}
-  restartDelay: 2
+  restartDelay: 1
   passable: 1
 --- !u!65 &2089913914
 BoxCollider:
@@ -13442,8 +13442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: Door Behind The Door
   roomText: {fileID: 2079804499}
-  returnMainDelay: 5
-  textDelay: 3
+  returnMainDelay: 2
+  textDelay: 1
   isClickAble: 1
   playerDistance: 3.5
 --- !u!65 &1811816587871443838
