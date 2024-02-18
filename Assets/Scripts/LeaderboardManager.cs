@@ -52,7 +52,12 @@ namespace LeaderBoard
 
         public void UploadEntry()
         {
-            Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
+            if (_usernameInputField.text == "")
+            {
+                _usernameInputField.text = "Anonymous";
+            }
+
+                Leaderboards.SpinToUnknown.UploadNewEntry(_usernameInputField.text, (int)Score, isSuccessful =>
             {
                 if (isSuccessful)
                     LoadEntries();
