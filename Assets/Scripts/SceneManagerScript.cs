@@ -15,11 +15,22 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField] private Animator animator;
     Canvas canvas;
     public float totalTimer;
-
+    private bool finalSceneDone;
     private int roomIndex;
     void Start()
     {
-       
+        if (PlayerPrefs.HasKey("FinalDone"))
+        {
+            if(PlayerPrefs.GetInt("FinalDone") == 1)
+            {
+                finalSceneDone = true;
+            }
+            else
+            {           
+                finalSceneDone = false;
+
+            }
+        }
         canvas = GetComponentInChildren<Canvas>();
         canvas.enabled = false;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -79,7 +90,16 @@ public class SceneManagerScript : MonoBehaviour
             } while (usedNumbers.Contains(randomRoom));
             usedNumbers.Add(randomRoom);
         }
-        else { SceneManager.LoadScene(10); } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
+        else {
+            if (!finalSceneDone)
+            {
+                SceneManager.LoadScene(10);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
+        } //buraya final odasýný çalýþtýracak kod eklenecek ve bu odaya gittikten sonra bitireceðiz
     }
 
     void SaveUsedNumbers()
@@ -179,7 +199,7 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void ReturnMainMenu()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(0);
     }
     public void UnlockMouse()
     {

@@ -3812,6 +3812,10 @@ PrefabInstance:
       propertyPath: walkSFX
       value: 
       objectReference: {fileID: 1433376768}
+    - target: {fileID: 6346766166771032805, guid: b28b659c17d999e4e80402914085ddda, type: 3}
+      propertyPath: lookSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5563626295175589982, guid: b28b659c17d999e4e80402914085ddda, type: 3}
