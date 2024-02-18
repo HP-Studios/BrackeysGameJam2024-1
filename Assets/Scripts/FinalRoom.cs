@@ -63,6 +63,7 @@ public class FinalRoom : MonoBehaviour
         finalBox.SetActive(true);
         movementScript.walkSFX.Stop();
         image.SetActive(true);
+        PlayerPrefs.SetFloat("Timer", numOfSecs);
         yield return new WaitForSeconds(1.5f);
         goodbyeText.SetActive(true);
         yield return new WaitForSeconds(10);
