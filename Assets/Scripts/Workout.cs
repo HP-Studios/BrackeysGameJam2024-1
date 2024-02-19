@@ -47,7 +47,7 @@ public class Workout : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) && crouchAmount != targetCrouchAmount && inSquatArea)
+        if (Input.GetKeyDown(KeyCode.C) && crouchAmount != targetCrouchAmount && inSquatArea)
         {
             crouchAmount++;
             crouchAmountText.text = "Squat:  " + crouchAmount + "/" + targetCrouchAmount;
@@ -57,7 +57,7 @@ public class Workout : MonoBehaviour
             squatBarbell.gameObject.transform.position = squatBarbellPosition;
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl) && deadliftAmount != targetDeadliftAmount && inDeadliftArea)
+        if (Input.GetKeyUp(KeyCode.C) && deadliftAmount != targetDeadliftAmount && inDeadliftArea)
         {
             deadliftAmount++;
             deadliftText.text = "Deadlift:  " + deadliftAmount + "/" + targetDeadliftAmount;
