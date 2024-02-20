@@ -93,6 +93,7 @@ public class SceneManagerScript : MonoBehaviour
         else {
             if (!finalSceneDone)
             {
+                PlayerPrefs.SetInt("FinalDone", 1);
                 SceneManager.LoadScene(10);
             }
             else
@@ -192,7 +193,7 @@ public class SceneManagerScript : MonoBehaviour
             PlayerPrefs.SetFloat("Timer", totalTimer);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();
         }
