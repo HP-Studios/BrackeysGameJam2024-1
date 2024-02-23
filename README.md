@@ -2,7 +2,7 @@
 ## A group project for Brackeys Game Jam 2024.1
 
 ### Final Result: (Out of 803 Entries / ?? Ratings)
-Ranked from 53 ratings. 
+Ranked from ?? ratings. 
 
 | Criteria      | Rank   | Score  |
 | ------------- |:------:| ------:|
