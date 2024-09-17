@@ -1,7 +1,7 @@
 # BrackeysGameJam2024.1
 ## A group project for Brackeys Game Jam 2024.1
 
-### Final Result: (Out of 803 Entries / ?? Ratings)
+### Final Result: (Out of 1518 Entries / ?? Ratings)
 Ranked from ?? ratings. 
 
 | Criteria      | Rank   | Score  |
